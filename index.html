@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>WP Rest Api test</title>
+</head>
+<body>
+  <div id="root">
+    <ul>
+      <li v-for="post in posts" v-bind:post="post">
+        <p class="name">{{ post.id }}</p>
+        <p class="title">{{ post.title.rendered }}</p>
+        <div class="content" v-html="post.content.rendered"></div>
+      </li>
+    </ul>
+  </div>
+  <script src="./dist/bundle.js"></script>
+</body>
+</html>
